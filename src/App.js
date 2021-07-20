@@ -1,7 +1,9 @@
+import SamplePage from "./pages/SamplePage";
+
 function App() {
   return (
     <div className="App">
-      TESTE
+      <SamplePage/>
     </div>
   );
 }
