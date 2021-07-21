@@ -1,4 +1,5 @@
 import SamplePage from "./pages/SamplePage";
+import "./App.css";
 
 function App() {
   return (

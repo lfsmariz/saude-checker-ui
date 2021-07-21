@@ -9,7 +9,7 @@ const SampleComponent = () => {
 
 
   const handleClick = (nameRequest) => {
-    axios.post('http://localhost:8080/player/create',
+    axios.post('https://saudechecker.herokuapp.com/player/create',
     {
       name: nameRequest
     })
@@ -25,7 +25,7 @@ const SampleComponent = () => {
 
   return(
     <div>
-    <h1>{resultado} - {idUser}</h1>
+    <h1 className = "user">{resultado} - {idUser}</h1>
     <input type="text" onChange = {handleInput}/>
     <button type = "button" onClick={() => handleClick(nome)}>Bati na api</button>
     </div>
