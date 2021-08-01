@@ -1,14 +1,18 @@
-import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import instance from "../config/axiosConfig";
 import RegisterBoard from "../components/RegisterBoard";
 import BoardList from "../components/BoardList";
+import RegisterAchievement from "../components/RegisterAchievement";
+import RegisterPlayer from "../components/RegisterPlayer";
+import BoardAchivements from "../components/BoardAchievements";
+import BoardPlayers from "../components/BoardPlayers";
 
 
 const AdminPage = () => {
   const initStateParams = {
     id: '',
+    board: '',
   }
 
   const initStateAdmin = {
@@ -18,6 +22,9 @@ const AdminPage = () => {
 
   const [params, setParams] = useState(initStateParams)
   const [admin, setAdmin] = useState(initStateAdmin)
+  const [lastBoard, setLastBoard] = useState("")
+  const [lastAchievement, setLastAchievement] = useState("")
+  const [lastPlayer, setLastPlayer] = useState("")
 
   const searchIdAdmin = () => {
     instance.get(`/admin/${params.id}`)
@@ -45,10 +52,22 @@ const AdminPage = () => {
         Carregamos o admin: {admin.id} - {admin.name}
       </div>
       <div>
-        <RegisterBoard idAdmin={admin.id}/>
+        <RegisterBoard idAdmin={admin.id} refreshBoards = {setLastBoard}/>
       </div>
       <div>
-        <BoardList typeUser = 'admin' idUser = {admin.id} handleInput = {handleInput}/>
+        <BoardList typeUser = 'admin' idUser = {admin.id} handleInput = {handleInput} lastBoard={lastBoard}/>
+      </div>
+      <div>
+        <RegisterAchievement idAdmin= {admin.id} refreshAchievements={setLastAchievement}  idBoard = {params.board}/>
+      </div>
+      <div>
+        <RegisterPlayer refreshPlayers = {setLastPlayer} idBoard = {params.board}/>
+      </div>
+      <div>
+        <BoardAchivements idBoard = {params.board} lastAchivement = {lastAchievement}/>
+      </div>
+      <div>
+        <BoardPlayers idBoard={params.board} lastPlayer={lastPlayer}/>
       </div>
       <div>
         <Link to="/">Voltar à Página Principal</Link>
