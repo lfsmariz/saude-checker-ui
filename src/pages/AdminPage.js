@@ -43,6 +43,10 @@ const AdminPage = () => {
 
   return (
     <div>
+      <div>
+        <Link to="/">Voltar à Página Principal</Link>
+      </div>
+
       <label htmlFor="input-id">
         Insira aqui o id do Admin:
         <input type="text" id="input-id" name="id" onChange={handleInput}/>
@@ -68,9 +72,6 @@ const AdminPage = () => {
       </div>
       <div>
         <BoardPlayers idBoard={params.board} lastPlayer={lastPlayer}/>
-      </div>
-      <div>
-        <Link to="/">Voltar à Página Principal</Link>
       </div>
     </div>
   )
