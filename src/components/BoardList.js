@@ -3,7 +3,7 @@ import instance from "../config/axiosConfig"
 
 const BoardList = (props) => {
 
-  const {idPlayer, handleInput} = props
+  const {typeUser, idUser, handleInput} = props
 
   const initBoards = [{
     "name": "",
@@ -15,13 +15,18 @@ const BoardList = (props) => {
   const [boardList, setBoardList] = useState(initBoards)
 
   useEffect(() => {
-    if ( idPlayer !== '') {
-      instance.get(`/player/boards/?id_player=${idPlayer}`)
-      .then(res => setBoardList([...initBoards,...res.data.boardDTOSet]))
+    if ( idUser !== '') {
+      if (typeUser == 'player'){
+        instance.get(`/player/boards/?id_player=${idUser}`)
+        .then(res => setBoardList([...initBoards,...res.data.boardDTOSet]))
+      } else if (typeUser == 'admin'){
+        instance.get(`/admin/boards/${idUser}`)
+        .then(res => setBoardList([...initBoards,...res.data.boards]))
+      }
     } else {
       setBoardList(initBoards)
     }
-  },[idPlayer])
+  },[idUser])
 
 
   return (

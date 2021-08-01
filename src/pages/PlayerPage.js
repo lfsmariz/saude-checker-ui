@@ -82,7 +82,7 @@ const PlayerPage = () => {
         <Link to="/">Voltar à Página Principal</Link>
       </div>
       <div>
-        <BoardList idPlayer = {player.id} handleInput = {handleInput}/>
+        <BoardList typeUser = 'player' idUser = {player.id} handleInput = {handleInput}/>
       </div>
       <div>
         <AchievementList idPlayer = {player.id} idBoard = {params.board} handleInput = {handleInput}/>
