@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import instance from "../config/axiosConfig";
 import RegisterBoard from "../components/RegisterBoard";
+import BoardList from "../components/BoardList";
 
 
 const AdminPage = () => {
@@ -45,6 +46,9 @@ const AdminPage = () => {
       </div>
       <div>
         <RegisterBoard idAdmin={admin.id}/>
+      </div>
+      <div>
+        <BoardList typeUser = 'admin' idUser = {admin.id} handleInput = {handleInput}/>
       </div>
       <div>
         <Link to="/">Voltar à Página Principal</Link>
