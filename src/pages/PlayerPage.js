@@ -93,6 +93,7 @@ const PlayerPage = () => {
       <div>
         <button onClick={redeemAchievement} disabled = {verifyRedeem()}>Resgatar Achievement</button>
       </div>
+      
       <div className = "divUser">
         <h1 className = "titleUser">Achievements resgatados</h1>
         <CompleteAchievementList idPlayer = {player.id} lastAchievement = {lastAchievment}/>

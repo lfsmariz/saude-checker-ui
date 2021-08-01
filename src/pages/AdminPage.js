@@ -47,31 +47,38 @@ const AdminPage = () => {
         <Link to="/">Voltar à Página Principal</Link>
       </div>
 
-      <label htmlFor="input-id">
-        Insira aqui o id do Admin:
-        <input type="text" id="input-id" name="id" onChange={handleInput}/>
-        <button onClick = {searchIdAdmin}>Carregar Admin</button>
-      </label>
-      <div>
-        Carregamos o admin: {admin.id} - {admin.name}
+      <div className = "divUser">
+        <label htmlFor="input-id">
+          Insira aqui o id do Admin:
+          <input type="text" id="input-id" name="id" onChange={handleInput}/>
+          <button onClick = {searchIdAdmin}>Carregar Admin</button>
+        </label>
+        <div>
+          Carregamos o admin: {admin.id} - {admin.name}
+        </div>
       </div>
-      <div>
+
+      <div className = "divUser">
         <RegisterBoard idAdmin={admin.id} refreshBoards = {setLastBoard}/>
       </div>
-      <div>
+
+      <div className = "divUser">
+        <h1 className = "titleUser">Ações no board</h1>
+
         <BoardList typeUser = 'admin' idUser = {admin.id} handleInput = {handleInput} lastBoard={lastBoard}/>
-      </div>
-      <div>
+        
+        <h3 className = "subTitleUser">Cadastro de achievements</h3>
         <RegisterAchievement idAdmin= {admin.id} refreshAchievements={setLastAchievement}  idBoard = {params.board}/>
-      </div>
-      <div>
+        
+        <h3 className = "subTitleUser">Cadastro de players</h3>
         <RegisterPlayer refreshPlayers = {setLastPlayer} idBoard = {params.board}/>
-      </div>
-      <div>
+
+        <h3 className = "subTitleUser">Achievements do board</h3>
         <BoardAchivements idBoard = {params.board} lastAchivement = {lastAchievement}/>
-      </div>
-      <div>
+
+        <h3 className = "subTitleUser">Players do board</h3>
         <BoardPlayers idBoard={params.board} lastPlayer={lastPlayer}/>
+
       </div>
     </div>
   )
