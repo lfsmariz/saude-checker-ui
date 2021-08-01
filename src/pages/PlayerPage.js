@@ -84,13 +84,13 @@ const PlayerPage = () => {
         </div>
       </div>
       
-      <div>
+      <div className = "divUser">
+        <h1 className = "titleUser">Seus boards</h1>
+
         <BoardList typeUser = 'player' idUser = {player.id} handleInput = {handleInput}/>
-      </div>
-      <div>
+
         <AchievementList idPlayer = {player.id} idBoard = {params.board} handleInput = {handleInput}/>
-      </div>
-      <div>
+
         <button onClick={redeemAchievement} disabled = {verifyRedeem()}>Resgatar Achievement</button>
       </div>
       
