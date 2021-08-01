@@ -3,7 +3,7 @@ import RegisterComponent from "../components/RegisterComponent";
 
 const RegisterPage = () => {
   return (
-    <div>
+    <div className="body">
       <RegisterComponent typeRegister="player"/>
       <RegisterComponent typeRegister="admin"/>
 
