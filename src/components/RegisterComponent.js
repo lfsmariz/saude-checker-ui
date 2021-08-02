@@ -26,12 +26,13 @@ const RegisterComponent = (props) => {
   }
 
   return(
-    <div>
-    <input type="text" onChange = {handleInput}/>
+    <div className = "divUser">
+    <h1 className = "titleUser">Criar {typeRegister}</h1>
+    <input type="text" placeholder="Inisira aqui o nome..." onChange = {handleInput}/>
     <button type = "button" onClick={() => handleClick(register)}>Cadastre {typeRegister}</button>
-    <p>Foi criado o {typeRegister}:</p>
-    <p className = "user">Nome: {nameUser}</p>
-    <p className = "user">ID: {idUser}</p>
+    <h3 className = "textTopUser">Foi criado o {typeRegister}:</h3>
+    <p className = "textUser">Nome: {nameUser}</p>
+    <p className = "textUser">ID: {idUser}</p>
     </div>
   );
 }

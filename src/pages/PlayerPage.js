@@ -66,30 +66,36 @@ const PlayerPage = () => {
 
   return (
     <div>
-      <label htmlFor="input-id">
-        Insira aqui o id do Player:
-        <input type="text" id="input-id" name="id" onChange={handleInput}/>
-        <button onClick = {searchId}>Carregar Player</button>
-      </label>
-      <div>
-        Carregamos o player: {player.id} - {player.name} - {player.points}
-      </div>
-      <div>
-        <button onClick={completeTask} disabled = {player.id === ''}>Completar Tarefa</button>
-      </div>
       <div>
         <Link to="/">Voltar à Página Principal</Link>
       </div>
-      <div>
+
+      <div className = "divUser">
+        <label htmlFor="input-id">
+          Insira aqui o id do Player:
+          <input type="text" id="input-id" name="id" onChange={handleInput}/>
+          <button onClick = {searchId}>Carregar Player</button>
+        </label>
+        <div>
+          Carregamos o player: {player.id} - {player.name} - {player.points}
+        </div>
+        <div>
+          <button onClick={completeTask} disabled = {player.id === ''}>Completar Tarefa</button>
+        </div>
+      </div>
+      
+      <div className = "divUser">
+        <h1 className = "titleUser">Seus boards</h1>
+
         <BoardList typeUser = 'player' idUser = {player.id} handleInput = {handleInput}/>
-      </div>
-      <div>
+
         <AchievementList idPlayer = {player.id} idBoard = {params.board} handleInput = {handleInput}/>
-      </div>
-      <div>
+
         <button onClick={redeemAchievement} disabled = {verifyRedeem()}>Resgatar Achievement</button>
       </div>
-      <div>
+      
+      <div className = "divUser">
+        <h1 className = "titleUser">Achievements resgatados</h1>
         <CompleteAchievementList idPlayer = {player.id} lastAchievement = {lastAchievment}/>
       </div>
     </div>

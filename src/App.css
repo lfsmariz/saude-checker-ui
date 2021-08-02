@@ -1,3 +1,61 @@
-.user {
-  border: 2px solid black;
+.divUser{
+  border-radius: 5px;
+  border: 2px solid whitesmoke;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+  margin: 6px;
+  margin-bottom: 15px;
+}
+
+.titleUser{
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.subTitleUser{
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.textTopUser{
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+
+.textUser{
+  margin: 0;
+  padding-top: 2px;
+}
+
+
+
+.divMain{
+  border-radius: 5px;
+  border: 2px solid seagreen;
+  background-color: seagreen;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+  margin: 20px;
+}
+
+.tituloMain{
+  margin: 0;
+  color: white;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-color: seagreen;
+}
+
+.subTituloMain{
+  margin: 0;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: seagreen;
 }
