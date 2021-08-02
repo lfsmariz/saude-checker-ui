@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/saude-checker-ui/static/css/main.562a2611.chunk.css",
+    "main.js": "/saude-checker-ui/static/js/main.633e6725.chunk.js",
+    "main.js.map": "/saude-checker-ui/static/js/main.633e6725.chunk.js.map",
+    "runtime-main.js": "/saude-checker-ui/static/js/runtime-main.c5a0345e.js",
+    "runtime-main.js.map": "/saude-checker-ui/static/js/runtime-main.c5a0345e.js.map",
+    "static/js/2.bc056142.chunk.js": "/saude-checker-ui/static/js/2.bc056142.chunk.js",
+    "static/js/2.bc056142.chunk.js.map": "/saude-checker-ui/static/js/2.bc056142.chunk.js.map",
+    "static/js/3.eeaa1e42.chunk.js": "/saude-checker-ui/static/js/3.eeaa1e42.chunk.js",
+    "static/js/3.eeaa1e42.chunk.js.map": "/saude-checker-ui/static/js/3.eeaa1e42.chunk.js.map",
+    "index.html": "/saude-checker-ui/index.html",
+    "static/css/main.562a2611.chunk.css.map": "/saude-checker-ui/static/css/main.562a2611.chunk.css.map",
+    "static/js/2.bc056142.chunk.js.LICENSE.txt": "/saude-checker-ui/static/js/2.bc056142.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5a0345e.js",
+    "static/js/2.bc056142.chunk.js",
+    "static/css/main.562a2611.chunk.css",
+    "static/js/main.633e6725.chunk.js"
+  ]
+}
