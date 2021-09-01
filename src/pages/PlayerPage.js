@@ -48,7 +48,7 @@ const PlayerPage = () => {
       setPlayer({...player, points: player.points - +res.data.points})
       setLastAchievment(res.data.name)
     })
-    .catch(res => alert("Você não tem pontos suficientes ou o achievement ja foi resgatado"))
+    .catch(res => alert("Você não tem pontos suficientes ou já resgatou algum achievement esse mês"))
   }
 
   const verifyRedeem = () => {
