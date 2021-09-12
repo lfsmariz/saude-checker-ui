@@ -14,15 +14,15 @@ function App() {
           <MainPage/>
         </Route>
 
-        <Route path="/player">
+        <Route exact path="/player">
           <PlayerPage/>
         </Route>
 
-        <Route path="/admin">
+        <Route exact path="/admin">
           <AdminPage/>
         </Route>
 
-        <Route path="/register">
+        <Route exact path="/register">
           <RegisterPage/>
         </Route>
       </Switch>
