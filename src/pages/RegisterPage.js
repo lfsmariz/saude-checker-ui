@@ -6,7 +6,7 @@ import NewPlayer from "../components/NewPlayer";
 const RegisterPage = () => {
   return (
     <div className="body">
-      <Link to="/">Voltar à Página Principal</Link>
+      <Link className="generalText" to="/">Voltar à Página Principal</Link>
 
       <NewPlayer/>
       <NewAdmin/>

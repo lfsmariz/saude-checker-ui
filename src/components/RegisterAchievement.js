@@ -37,11 +37,11 @@ const RegisterAchievement = (props) => {
 
   return(
     <div>
-      <label htmlFor="name-achievement">
+      <label className="generalText" htmlFor="name-achievement">
         Nome do Achievement:
         <input id="name-achievement" type="text" onChange = {handleInputAchievementName}/>
       </label>
-      <label htmlFor="date-board">
+      <label className="generalText" htmlFor="date-board">
         Pontuação do Achievement:
         <input id="date-board" type="text" onChange = {handleInputAchievementPoints} placeholder="1000"/>
       </label>

@@ -6,7 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import PlayerPage from "./pages/PlayerPage";
 
 function App() {
-  document.body.style.backgroundColor="springgreen"
+  document.body.style.backgroundColor="#9B111E"
   return (
     <Router>
       <Switch>

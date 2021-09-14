@@ -40,13 +40,13 @@ const RegisterBoard = (props) => {
 
   return(
     <div>
-      <h1 className = "titleUser">Criar board</h1>
-      <label htmlFor="name-board">
+      <h1 className = "titleUser" >Criar board</h1>
+      <label className="generalText" htmlFor="name-board">
         Nome do Board:
         <input id="name-board" type="text" onChange = {handleInputName}/>
       </label>
       <p></p>
-      <label htmlFor="date-board">
+      <label className="generalText" htmlFor="date-board">
         Data de fim:
         <input id="date-board" type="text" onChange = {handleInputDate} placeholder="YYYY-MM-DD"/>
       </label>

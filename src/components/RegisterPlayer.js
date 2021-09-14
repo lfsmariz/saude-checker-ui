@@ -29,7 +29,7 @@ const RegisterPlayer = (props) => {
 
   return(
     <div>
-      <label htmlFor="name-player">
+      <label className="generalText" htmlFor="name-player">
         ID do Player:
         <input id="name-player" type="text" onChange = {handleInputAchievementName}/>
       </label>

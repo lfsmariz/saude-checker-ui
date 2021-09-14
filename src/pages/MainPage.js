@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
     <>
-    <h1>Saude Checker</h1>
+    <h1 className="titleApp" >Lanchonete</h1>
     <Link to="/admin">
       <div className="divMain">
         <h1 className="tituloMain">Página do administrador</h1>

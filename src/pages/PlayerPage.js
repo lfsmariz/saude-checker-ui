@@ -72,20 +72,20 @@ const PlayerPage = () => {
   return (
     <div>
       <div>
-        <Link to="/">Voltar à Página Principal</Link>
+        <Link className="generalText" to="/">Voltar à Página Principal</Link>
       </div>
 
       <div className = "divUser">
-        <label htmlFor="input-id">
+        <label className="generalText" htmlFor="input-id">
           Insira aqui o id do Player:
           <input type="text" id="input-id" name="id" onChange={handleInput}/>
           <button onClick = {searchId}>Carregar Player</button>
         </label>
-        <div>
+        <div className="generalText">
           Carregamos o player: {player.id} - {player.name} - {player.points}
         </div>
         <div>
-          <label htmlFor="input-price">
+          <label className="generalText" htmlFor="input-price">
             Valor da compra:
           <input type= "text" id = "input-price" name="price" onChange={handlePrice}/>
           <button onClick={() => completeTask(price)} disabled = {player.id === ''}>Adicionar Pontos</button>

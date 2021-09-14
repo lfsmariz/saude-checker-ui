@@ -31,7 +31,7 @@ const BoardList = (props) => {
 
   return (
     <div>
-      <label>Selecione o board:</label>
+      <label className="generalText">Selecione o board:</label>
       <select name="board" onClick = {handleInput}>
         {boardList.map(e => (
           <option key={e.id_board} value = {e.id_board}>{e.name}</option>

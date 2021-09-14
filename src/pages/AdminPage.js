@@ -44,16 +44,16 @@ const AdminPage = () => {
   return (
     <div>
       <div>
-        <Link to="/">Voltar à Página Principal</Link>
+        <Link className="generalText" to="/">Voltar à Página Principal</Link>
       </div>
 
       <div className = "divUser">
-        <label htmlFor="input-id">
+        <label htmlFor="input-id" className="generalText">
           Insira aqui o id do Admin:
           <input type="text" id="input-id" name="id" onChange={handleInput}/>
           <button onClick = {searchIdAdmin}>Carregar Admin</button>
         </label>
-        <div>
+        <div className="generalText"> 
           Carregamos o admin: {admin.id} - {admin.name}
         </div>
       </div>
