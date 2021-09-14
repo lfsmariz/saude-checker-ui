@@ -1,9 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const RegisterComponent = (props) => {
-
-  const {typeRegister} = props
+const NewAdmin = () => {
 
   const [register, setRegister] = useState("")
   const [idUser, setIdUser] = useState("")
@@ -11,7 +9,7 @@ const RegisterComponent = (props) => {
 
 
   const handleClick = (nameRequest) => {
-    axios.post(`https://saudechecker.herokuapp.com/${typeRegister}/create`,
+    axios.post(`https://snackbarchecker.herokuapp.com/admin/create`,
     {
       name: nameRequest
     })
@@ -27,14 +25,14 @@ const RegisterComponent = (props) => {
 
   return(
     <div className = "divUser">
-    <h1 className = "titleUser">Criar {typeRegister}</h1>
-    <input type="text" placeholder="Inisira aqui o nome..." onChange = {handleInput}/>
-    <button type = "button" onClick={() => handleClick(register)}>Cadastre {typeRegister}</button>
-    <h3 className = "textTopUser">Foi criado o {typeRegister}:</h3>
+    <h1 className = "titleUser">Criar Admin</h1>
+    <input type="text" placeholder="Insira aqui o nome..." onChange = {handleInput}/>
+    <button type = "button" onClick={() => handleClick(register)}>Cadastre Admin</button>
+    <h3 className = "textTopUser">Foi criado o Admin:</h3>
     <p className = "textUser">Nome: {nameUser}</p>
     <p className = "textUser">ID: {idUser}</p>
     </div>
   );
 }
 
-export default RegisterComponent;
+export default NewAdmin;
