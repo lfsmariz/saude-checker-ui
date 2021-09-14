@@ -22,6 +22,7 @@ const PlayerPage = () => {
   const [params, setParams] = useState(initStateParams)
   const [player, setPlayer] = useState(initStatePlayer)
   const [lastAchievment, setLastAchievment] = useState("")
+  const [price, setPrice] = useState("")
 
   const searchId = () => {
     instance.get(`/player/${params.id}`)
@@ -36,6 +37,10 @@ const PlayerPage = () => {
     const newValue = {...params}
     newValue[name] = value
     setParams(newValue)
+  }
+
+  const handlePrice = (event) => {
+    setPrice(event.target.value)
   }
 
   const redeemAchievement = () => {
@@ -58,8 +63,8 @@ const PlayerPage = () => {
     return false
   }
 
-  const completeTask = () => {
-    instance.post(`/player/complete_task/?id_player=${player.id}`)
+  const completeTask = (price) => {
+    instance.post(`/player/complete_task?id_player=${player.id}&value=${price}`)
     .then((res) => setPlayer(res.data))
   }
 
@@ -80,7 +85,11 @@ const PlayerPage = () => {
           Carregamos o player: {player.id} - {player.name} - {player.points}
         </div>
         <div>
-          <button onClick={completeTask} disabled = {player.id === ''}>Completar Tarefa</button>
+          <label htmlFor="input-price">
+            Valor da compra:
+          <input type= "text" id = "input-price" name="price" onChange={handlePrice}/>
+          <button onClick={() => completeTask(price)} disabled = {player.id === ''}>Adicionar Pontos</button>
+          </label>
         </div>
       </div>
       
