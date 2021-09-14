@@ -6,6 +6,7 @@ const RegisterAchievement = (props) => {
   const {idAdmin, refreshAchievements, idBoard} = props
   const [registerNameAchievement, setRegisterNameAchievement] = useState("")
   const [registerPointAchievement, setRegisterPointAchievemen] = useState("")
+  const [registerPlanType, setRegisterPlanType] = useState("")
 
 
   const handleClick = () => {
@@ -14,11 +15,12 @@ const RegisterAchievement = (props) => {
       "name": registerNameAchievement,
       "id_admin": idAdmin,
       "id_board": idBoard,
-      "points": registerPointAchievement
+      "points": registerPointAchievement,
+      "plan_type": registerPlanType,
     })
     .then(r => {
       alert(
-        `Achievement Criado: \n ID :${r.data.id}, \n Nome: ${r.data.name}, \n Pontos; ${r.data.points}, \n Pontos; ${r.data.board_name}`,
+        `Achievement Criado: \n ID :${r.data.id}, \n Nome: ${r.data.name}, \n Pontos: ${r.data.points}, \n Board: ${r.data.board_name}, \n Plan: ${r.data.plan_type}`,
       )
       refreshAchievements(r.data.name)
     })
@@ -35,6 +37,10 @@ const RegisterAchievement = (props) => {
     setRegisterPointAchievemen(event.target.value)
   }
 
+  const handleInputPlanType = (event) => {
+    setRegisterPlanType(event.target.value)
+  }
+
   return(
     <div>
       <label htmlFor="name-achievement">
@@ -44,6 +50,10 @@ const RegisterAchievement = (props) => {
       <label htmlFor="date-board">
         Pontuação do Achievement:
         <input id="date-board" type="text" onChange = {handleInputAchievementPoints} placeholder="1000"/>
+      </label>
+      <label htmlFor="plan-type">
+        Tipo do Achievement:
+        <input id="plan-type" type="text" onChange = {handleInputPlanType} placeholder="10"/>
       </label>
     <button type = "button" onClick={() => handleClick()}>Cadastre Achievement</button>
     </div>

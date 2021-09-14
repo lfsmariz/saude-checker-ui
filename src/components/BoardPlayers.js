@@ -18,7 +18,7 @@ const BoardPlayers = (props) => {
   return (
     <ul>
       {BoardAchievements.map(e => (
-        <li key={e.id}>{e.name} - {e.points}pts</li>
+        <li key={e.id}>{e.name} - {e.points}pts - {e.planType} plan</li>
       ))}
     </ul>
   )

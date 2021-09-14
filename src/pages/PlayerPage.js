@@ -17,6 +17,7 @@ const PlayerPage = () => {
     id: '',
     name: '',
     points: '',
+    planType: ''
   }
 
   const [params, setParams] = useState(initStateParams)
@@ -58,8 +59,8 @@ const PlayerPage = () => {
     return false
   }
 
-  const completeTask = () => {
-    instance.post(`/player/complete_task/?id_player=${player.id}`)
+  const completeTask = (val) => {
+    instance.post(`/player/complete_task/?id_player=${player.id}&value=${val}`)
     .then((res) => setPlayer(res.data))
   }
 
@@ -78,9 +79,13 @@ const PlayerPage = () => {
         </label>
         <div>
           Carregamos o player: {player.id} - {player.name} - {player.points}
+          <br />
+          Tipo de Plano: {player.planType}
         </div>
         <div>
-          <button onClick={completeTask} disabled = {player.id === ''}>Completar Tarefa</button>
+          <button onClick={() => completeTask(10)} disabled = {player.id === ''}>Completar Tarefa Fácil</button>
+          <button onClick={() => completeTask(20)} disabled = {player.id === ''}>Completar Tarefa Médio</button>
+          <button onClick={() => completeTask(30)} disabled = {player.id === ''}>Completar Tarefa Difícil</button>
         </div>
       </div>
       

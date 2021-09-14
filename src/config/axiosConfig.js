@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-  baseURL: 'https://saudechecker.herokuapp.com'
+  baseURL: 'https://gymchecker.herokuapp.com'
 })
 
 export default instance;

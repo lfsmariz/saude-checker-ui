@@ -36,8 +36,8 @@
 
 .divMain{
   border-radius: 5px;
-  border: 2px solid seagreen;
-  background-color: seagreen;
+  border: 2px solid green;
+  background-color: green;
   padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -50,12 +50,16 @@
   color: white;
   padding-bottom: 10px;
   text-decoration: underline;
-  text-decoration-color: seagreen;
+  text-decoration-color: green;
 }
 
 .subTituloMain{
   margin: 0;
   color: white;
   text-decoration: underline;
-  text-decoration-color: seagreen;
+  text-decoration-color: green;
+}
+
+body {
+  background-color: gray;
 }
